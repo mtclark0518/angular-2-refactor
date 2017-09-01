@@ -1,0 +1,16 @@
+<!--Angular Code Below -->
+
+
+<p>My favorite cartoon is <b *ngIf="debbieDowner">not</b> : {{favoriteCartoon}}</p>
+<label>
+		Go Negative: <input type="checkbox" [checked]="debbieDowner" (change)="debbieDowner = !debbieDowner">
+	</label>
+<ul>
+    <li *ngFor="let character of characters" [ngClass]="{redText: showZoidberg}">{{character.name}}</li>
+</ul>
+<h4>I made {{money | currency}} last year. It's all about the Washingtons, baby!</h4>
+<div>
+    <button (click)="woopWoopWoop()">Lobster Doctor</button>
+</div>
+<img *ngIf="showZoidberg" [src]="imageUrl" alt="Why Not Zoidberg?">
+<!--Including JS -->
